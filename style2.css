@@ -1,0 +1,11 @@
+body {background: cadetblue;}
+p {
+    color: rgb(255,255,0);
+}
+h1 {
+    color: rgba(255,255,0,0.5);
+}
+h2 {
+    color: rgb(255,255,255);
+    background: rgb(0,0,0);
+}
