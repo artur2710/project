@@ -1,0 +1,46 @@
+ol li.red {
+    color: red;
+}
+ul li.green {
+    color: green;
+}
+ol li.purple {
+    color: purple;
+}
+ol {
+ list-style-type:decimal;
+ list-style-position: outside;   
+}
+ul {
+    list-style-type: square;
+}
+.padding {
+    background-color: purple;
+    padding: 30px;
+}
+.margin {
+    background-color: red;
+    margin: 50px;
+}
+ol.element {list-style-type: none;
+counter-reset: number;}
+ol.element li::before {
+    content: counter(number) '@';
+    counter-increment: number;
+}
+blockquote::before {
+    content: "#";
+}
+blockquote::after {
+    content: "#";
+}
+ul.element2 {list-style-type: none;
+font-style: italic;}
+ul.element2 li::before {
+    content: '- ';
+color: #04b548;
+}
+img.image {
+    border: 10px green solid;
+    border-end-end-radius: 50px;
+}
