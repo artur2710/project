@@ -1,0 +1,23 @@
+table {
+    border: 1px solid black;
+    border-radius: 5px;
+    empty-cells: hide;
+}
+
+th {
+    border: 20px solid red;
+    border-image: url("image01.jpg") 70;
+}
+
+td {
+    border: 1px solid blue;
+}
+
+#uniq {
+    width: 100px;
+    height: 50px;
+    text-align: end;
+    background-color: #f9f9f9f9;
+    empty-cells: hide;
+
+}

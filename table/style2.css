@@ -1,0 +1,30 @@
+table {
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid red;
+}
+
+td {
+    border: 1px solid blue;
+}
+
+caption {
+    text-align: center;
+    caption-side: bottom;
+}
+td:nth-child(2n+1) {
+    background-color: blueviolet;
+}
+td:nth-child(odd) {
+ background-color: darkgreen;
+}
+
+td:nth-child(2) {
+    background-color: brown;
+}
+td:nth-child(3n+2) {
+    color: cyan;
+}
+
