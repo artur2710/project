@@ -1,0 +1,39 @@
+div.min-w{
+    background-color: aqua;
+    width: 90%;
+    height: 200px;
+    min-width: 300px;
+}
+
+div.max-w{
+    background-color:aquamarine;
+    width: 80%;
+    height: 200px;
+    max-width: 300px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div.min-h {
+    background-color:blueviolet;
+    width: 80%;
+    height: 70%;
+    min-height: 20px;
+}
+
+div.max-h {
+    background-color: brown;
+    width: 80%;
+    height: 70%;
+    max-height: 20px;
+}
+
+div.overflow {
+    background-color: bisque;
+    overflow: scroll;
+    width: 300px;
+    height: 100px;
+}
