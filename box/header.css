@@ -1,0 +1,19 @@
+body {margin: 0; font-family: sans-serif;}
+
+header {
+    background-color: #ff6825;
+    text-align: center;
+    height: 250px;
+    padding: 8% 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 2px rgb(172, 158, 158);
+}
+
+header h2 {
+    font-size: 3rem;
+    color: #692c2c; text-shadow: 2px 2px 2px rgba(255, 255, 255, 21);
+}
