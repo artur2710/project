@@ -1,11 +1,10 @@
-body {background: cadetblue;}
-p {
-    color: rgb(255,255,0);
+ol {background-color: rgb(238, 190, 190);
+    padding: 20px 0px 20px 20px;
+    list-style-position: inside;
+    font-family: Arial;
+    color: aliceblue;
 }
-h1 {
-    color: rgba(255,255,0,0.5);
+li {background-color: rgb(236, 159, 159);
+padding: 10px 0px 10px 10px;
 }
-h2 {
-    color: rgb(255,255,255);
-    background: rgb(0,0,0);
-}
+.red {background-color: brown;}
