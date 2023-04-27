@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    gap: 10px;
+}
+
+div {
+    width: 200px;
+    height: 300px;
+    background-size: 50%;
+    background-color: #ffdb3a;
+    background-repeat: no-repeat;
+    background-position: top left;
+    border: 10px dotted black;
+    padding: 20px;
+}
+
+.left {background-clip: border-box;}
+.middle {background-clip: padding-box;}
+.right {background-clip: content-box;}

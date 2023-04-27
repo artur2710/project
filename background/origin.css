@@ -1,0 +1,22 @@
+div {
+    width: 200px;
+    height: 200px;
+    background-size: 50%;
+    background-image: url('images/n3.jpg');
+    background-repeat: no-repeat;
+    background-position: top left;
+    border: 10px dotted black;
+    padding: 20px;
+}
+
+.left {
+    background-origin: border-box;
+}
+
+.middle {
+    background-origin: padding-box;
+}
+
+.right {
+    background-origin: content-box;
+}
