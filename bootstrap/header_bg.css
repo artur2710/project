@@ -1,7 +1,12 @@
 .header_bg {
     height: 50vw;
     max-height: 90vh;
-    background-image: url(n1.jpg);
+    background-image: url(n1.jpeg);
     background-size: 100%;
     background-repeat: no-repeat;
+}
+
+img {
+    height: 100px;
+    width: 100px;
 }
