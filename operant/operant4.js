@@ -77,10 +77,10 @@ switch (arg) {
 
 let abc = +prompt("Введите число",'');
 switch(abc) {
-    case 0: alert('Введите число 0')
+    case 0: alert('Введите число 0');
     break 
-case 1: alert('Введите число 1')
+case 1: alert('Введите число 1');
     break 
 case 2: 
-case 3: alert('Вы ввели число 2, а может и3')
+case 3: alert('Вы ввели число 2, а может и3');
 }
