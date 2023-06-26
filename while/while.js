@@ -63,11 +63,67 @@ console.log(sum);*/
     }
 }*/
 
-let N = 100;
+/*let N = 100;
 let sum = 0;
 for (let i = 1; i <=N; i++) {
     if (i%2==0) {
         sum +=i
     }
 }
-console.log(sum)
+console.log(sum)*/
+
+
+/*let N = 100;
+let sum = 0;
+let i = 1;
+while (i <= N) {
+    if (i % 2 == 0) {
+        sum += i
+    }
+    i++;
+}
+console.log(sum);*/
+
+
+/*let num = 5;
+let multiplication;
+let i = 1;
+while (i<=10) {
+    multiplication=num*1;
+    i++
+}
+console.log (multiplication)*/
+
+/*let arg;
+do {
+   arg = prompt("Введите число больше 100");
+  
+} while (arg <= 100);*/
+
+
+/*var sum = 0
+debugger;
+while (true) 
+{
+    var value = +prompt("Введите число",'');
+    if (!value)
+        {break;}
+    sum += value;
+}
+alert('Сумма:' + sum);*/
+
+
+let n = +prompt('Введите число');
+let isPrime = true;
+for (let i = 2; i < n; i++) {
+    if (n % i == 0) {
+        isPrime = false;
+        break;
+    }
+}
+if (isPrime) {
+console.log (n, " - Простое число");
+}
+else {
+    console.log (n, "- Составное число")
+}
