@@ -53,6 +53,8 @@ console.log(Math.random());*/
 console.log(Math.random()*10);
 console.log(Math.floor(Math.random()*10));*/
 
-console.log(Math.ceil(Math.random()*99));
+/*console.log(Math.ceil(Math.random()*99));
 Math.floor(Math.random()*10);// до 9
-Math.floor(Math.random()*11);//до 10
+Math.floor(Math.random()*11);//до 10*/
+
+
