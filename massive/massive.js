@@ -88,6 +88,126 @@ const result=words.filter(word=>word.length>6);
 console.log(result);*/
 
 
-let array1=[1,4,9,16];
+/*let array1=[1,4,9,16];
 let map1=array1.map(x=>x*2);
-console.log(map1);
+console.log(map1);*/
+
+
+/*Array.isArray([]);
+Array.isArray([1]);
+Array.isArray(new Array());
+Array.isArray({});
+Array.isArray(null);
+Array.isArray(undefined);
+Array.isArray(17);
+Array.isArray("Array");*/
+
+
+/*const array1 = [1,30,39,29,10,13];
+const isBelow = (currentValue)=>currentValue<40;
+console.log(array1.every(isBelow));*/
+
+
+/*const array = [1,2,3,4,5];
+const even = (element)=>element%2===0;
+console.log(array.some(even));*/
+
+
+/*const array1 = [1,30,39,29,10,13];
+const isBelow = (currentValue)=>currentValue>0;
+console.log(array1.every(isBelow));*/
+
+
+/*const array = [1,2,-3,4,-5];
+const even = (element)=>element<0;
+console.log(array.some(even));*/
+
+
+/*let myAwesomeArray = [1,2,3,4,5];
+let res = myAwesomeArray.reduce((total, value)=>total*value);
+//1*2*3*4*5
+console.log(res);*/
+
+
+/*const array = [1,2,3,4,5];
+let res = array.reduce((total, value)=>total+value);
+console.log(res);*/
+
+
+/*const array = [1,2,3,0,4,5];
+let isNull = false;
+let sum = array.reduce((sum,item)=>{
+    if(item==0){
+        isNull=true;
+    }
+    if(isNull){
+        return sum+item;
+    }
+    else {
+        return sum;
+    }});
+    console.log(sum);*/
+
+
+/*const array1 = [1,2,3,4];
+console.log(array1.fill(0,2,4));
+console.log(array1.fill(5,1));
+console.log(array1.fill(6));
+let arr2=new Array(10);
+console.log(arr2[0]);
+console.log(arr2.length);
+let arr = new Array(10).fill().map((item,index)=>index);*/
+
+
+/*let items = 
+[[1,2],
+[3,4],
+[5,6]];
+console.log (items[0][0]);
+console.log (items[0][1]);
+console.log (items[1][0]);
+console.log (items[1][1]);*/
+
+
+/*et studentsData = [['Андрей',24],['Настя',23],];
+studentsData.push(['Даня',24]);
+console.log(studentsData);
+
+let studentsDataNew = [['Андрей',24], ['Настя',23],];
+studentsDataNew[1].push('привет');
+console.log(studentsDataNew);*/
+
+
+/*let studentsData = [['Андрей',24],['Настя',23],['Даня',24]];
+console.log(studentsData);
+let popped = studentsData.pop()
+console.log(popped);*/
+
+
+/*let studentsData = [['Андрей',24],['Настя',23]];
+for(let i=0;i<studentsData.length;i++){
+    let innerArrayLength=studentsData[i].length;
+    for(let j=0; j<innerArrayLength;j++) {
+        console.log(studentsData[i][j]);
+    }
+}
+
+
+let studentsData2 = [['Андрей',24],['Настя',23]]; 
+for (let i of studentsData2) {
+    for (let j of i){       
+    console.log(i)
+}}*/
+
+
+/*let studentsData2 = [['Андрей',24],['Настя',23]]; 
+ studentsData2.forEach((student)=>{
+     student.forEach((data)=>{
+         console.log(data);
+     });
+ });*/
+
+
+let studentsData = [['Андрей', 24], ['Настя', 23]];
+let newArray = studentsData.flat();
+console.log(newArray);
