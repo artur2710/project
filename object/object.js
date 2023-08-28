@@ -148,13 +148,70 @@ console.log(user.name);//Vasya
 user = {surname:"Sidorov"};*/
 
 
-const catVasya = {
+/*const catVasya = {
     name: 'Vasya',
     age: 2,
     color: 'red',
     weight: 3,
     mew: function(){
         console.log('miu-miy');
+    },
+    sayName() {
+        console.log('Привет, я кот' + this.name);
+    },
+    sayAge() {
+        console.log('Привет, мне' + this.age);
+    },
+    sayColor() {
+        console.log('Привет, я' + this.color);
     }
     };
-catVasya.mew();
+catVasya.sayColor();
+catVasya.sayName();
+catVasya.sayAge();*/
+
+
+/*let person = {
+    name: "John",
+    age: 30,
+    city: "New York",
+    phone: "123-456-7890",
+    showPersonInfo() {
+        console.log("Name: " + person.name);
+        console.log("Age: " + person.age);
+        console.log("City: " + person.city);
+        console.log("Phone: " + person.phone);
+    }
+};
+person.showPersonInfo();*/
+
+
+/*let people = [
+    {name: "John", age: 30},
+    {name: "Bob", age: 25},
+    {name: "Alice", age: 28},
+];
+function getNames(people) {
+    let result = [];
+    for (let i = 0; i<people.length; i++) {
+        if (people[i].age>25) {
+            result.push(people[i].name);
+        }
+    }
+    return result;
+}
+console.log(getNames(people));*/
+
+
+function User(name) {
+    this.name = name;
+    this.sayHi = function(){
+        alert("My name is: " + this.name);
+    }
+}
+let john = new User("John");
+john.sayHi();
+let anya = new User("Anya");
+anya.sayHi();
+let masha = new User("Masha");
+masha.sayHi();
