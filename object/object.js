@@ -203,7 +203,7 @@ function getNames(people) {
 console.log(getNames(people));*/
 
 
-function User(name) {
+/*function User(name) {
     this.name = name;
     this.sayHi = function(){
         alert("My name is: " + this.name);
@@ -214,4 +214,83 @@ john.sayHi();
 let anya = new User("Anya");
 anya.sayHi();
 let masha = new User("Masha");
-masha.sayHi();
+masha.sayHi();*/
+
+
+/*let book = {
+    title: "Lord of the Rings",
+    pages: 356,
+    author: "J.R.R.Tolkien",
+    showBookInfo() {
+        console.log("Title: " + book.title);
+        console.log("Pages: " + book.pages);
+        console.log("Author: " + book.author);
+    }
+};
+book.showBookInfo();*/
+
+
+/*let people = [
+    {name: "John", age: 30},
+    {name: "Bob", age: 25},
+    {name: "Alice", age: 28},
+];
+function getBob(people) {
+    let result = {};
+    for (let i = 0; i<people.length; i++) {
+        if (people[i].name=="Bob") {
+            result = Object.assign({}, people[i]);
+        }
+    }
+    return result;
+}
+console.log(getBob(people));
+
+let p = people.filter(person=>person.name=="Bob");
+console.log(p);*/
+
+
+/*let people = [
+    {name: "John", age: 30},
+    {name: "Bob", age: 25},
+    {name: "Anna", age: 28},
+];
+
+let p = people.filter(people => people.name !== 'Anna');
+console.log(p);
+
+
+function getWithoutAnna(people) {
+    for (let i = 0; i<people.length; i++) {
+        if (people[i].name=="Anna") {
+            people.splice(i,1);
+        }
+    }
+    return people;
+}
+console.log(getWithoutAnna(people));*/
+
+
+/*let people = [
+    {name: "John", age: 30},
+    {name: "Bob", age: 25},
+    {name: "Anna", age: 28},
+];
+    console.log(people.sort((a,b)=> a.age - b.age));*/
+
+
+let litmir = [
+    { author: 'Хэленка', title: 'Улетела сказка' },
+    { author: 'Кроул Кресли', title: 'Восстание Аркан' },
+    { author: 'Райчел Мид', title: 'Золотая лилия' }
+]
+function propertyvalue(array, key) {
+    for (let i = 0; i < litmir.length; i++) {
+        let obj = litmir[i];
+        for (let k in obj) {
+            if (k == key) {
+                console.log(obj[k]);
+            }
+        }
+    }
+}
