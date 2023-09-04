@@ -279,7 +279,7 @@ console.log(getWithoutAnna(people));*/
     console.log(people.sort((a,b)=> a.age - b.age));*/
 
 
-let litmir = [
+/*let litmir = [
     { author: 'Хэленка', title: 'Улетела сказка' },
     { author: 'Кроул Кресли', title: 'Восстание Аркан' },
     { author: 'Райчел Мид', title: 'Золотая лилия' }
@@ -293,4 +293,161 @@ function propertyvalue(array, key) {
             }
         }
     }
+}*/
+
+
+/*const userData= {
+    name: "John",
+    age: 25,
+    isOnline: true
 }
+console.log(Object.values(userData));//возвращает ["john", 25, true]
+console.log(Object.entries(userData));
+console.log(Object.keys(person));*/
+
+/*const userData= {
+    name: "John",
+    age: 25,
+    avaliable: false
+}
+console.log(Object.keys(person));*/
+
+/*const person = {
+    name: "Alex",
+    age: 35,
+    available: true
+}
+Object.freeze(person);
+console.log(person);*/
+
+
+/*const userData= {
+    name: "Brad",
+    age: 28,
+    isOnline: false
+}
+Object.seal(userData);
+console.log(userData);*/
+
+
+/*Object.is(50, 50); //истинно
+Object.is ('foo', 'bar'); //ложно
+Object.is(foo,foo); //истинно*/
+
+
+/*const book = {title: 'Дюна'}
+const anotherbook = {title: 'Дюна'}
+console.log(book=== anotherbook)
+console.log(Object.is(anotherbook));*/
+
+
+/*const book = {title: 'Дюна'}
+const anotherBook = book
+console.log(book === anotherBook);
+console.log(Object.is(book, anotherBook));*/
+
+
+/*let user = {
+    name: "John",
+    sizes: {
+        height: 182,
+        width: 50
+    }
+};
+let clone = Object.assign({}, user);
+console.log(user);
+console.log(clone);
+user.name = "Lena";
+console.log(user.name);
+console.log(clone.name);
+user.sizes.height = 200;
+console.log(user.sizes.height);
+console.log(clone.sizes.height);*/
+
+
+/*let objects = {
+    name: "John",
+    sizes: {
+        height: 182,
+        width: 50
+    }
+};
+let deep = structuredClone(objects);
+console.log(objects.sizes.height);
+console.log(deep.sizes.height);
+objects.sizes.height = 183;
+console.log(objects.sizes.height);
+console.log(deep.sizes.height);
+deep.sizes.height = 184;
+console.log(objects.sizes.height);
+console.log(deep.sizes.height);*/
+
+
+/*let user = {};//пользователь без свойства "address"
+alert(user.address.street);//Ошибка!
+alert(user?.address?.street);//undefined (без ошибки)*/
+
+
+/*let userAdmin = {
+    admin() {
+        alert("Я админ");
+    }
+};
+let userGuest = {};
+userAdmin.admin?.();//Я админ
+userGuest.admin?.();//нтчего не произойдет(такого метода нет)*/
+
+
+/*let key = "firstName";
+let user1 = {firstName: "John"};
+let user2 = null;
+alert(user1?.[key]);//John
+alert(user2?.[key]);//undefined*/
+
+
+/*function User(name) {
+    this.name = name;
+    this.sayHi = function () {
+        alert("Меня зовут:" + this.name);
+    };
+}
+let john = new User("John");
+john.sayHi();//Меня зовут:John
+
+let anya = new User("Anya");
+anya.sayHi()//Меня зовут: Anya
+
+let john2 = {
+    name: "John",
+    sayHi() {
+        alert("Меня зовут:" + this.name);
+    }
+}
+let anna = {
+    name: "Anna",
+    sayHi() {
+        alert("Меня зовут:" + this.name);
+    }
+}
+john2.sayHi();//Меня зовут:John
+anna.sayHi();*/
+
+
+/*function Hero(name = "Герой") {
+    this.name = name;//this.name = name||"Герой";
+}
+let Ivan = new Hero("Иван");
+let Hto_to = new Hero();
+
+alert(Ivan.name);//Иван
+alert(Hto_to.name);//Герой*/
+
+function Car(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+}
+let mycar = new Car("Eagle", "Talo TSi", 1993);
+console.log(mycar.make);
+console.log(mycar.model);
+console.log(mycar.year);
