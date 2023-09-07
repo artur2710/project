@@ -442,12 +442,134 @@ let Hto_to = new Hero();
 alert(Ivan.name);//Иван
 alert(Hto_to.name);//Герой*/
 
-function Car(make, model, year) {
+
+/*function Car(make, model, year) {
     this.make = make;
     this.model = model;
     this.year = year;
 }
 let mycar = new Car("Eagle", "Talo TSi", 1993);
-console.log(mycar.make);
-console.log(mycar.model);
-console.log(mycar.year);
+    console.log(mycar.make);
+    console.log(mycar.model);
+    console.log(mycar.year);*/
+
+
+/*function Calculator(a,b) {
+    this.a = a,
+    this.b = b,
+    this.add = function () {
+        return this.a + this.b;
+    },
+    this.sub = function () {
+        return this.a - this.b;
+    },
+    this.mul = function () {
+        return this.a * this.b;
+    },
+    this.div = function () {
+        return this.a / this.b;
+},
+this.degree = function () {
+    return this.a** this.b;
+}
+}
+let calculator = new Calculator(11,5);
+console.log (calculator.add());
+console.log (calculator.sub());
+console.log (calculator.mul());
+console.log (calculator.div());
+console.log (calculator.degree());*/
+
+
+/*function Calculator(a, b) {
+    this.a = a,
+        this.b = b,
+        this.add = () => a + b,
+        this.sub = () => a - b,
+        this.mul = () => a * b,
+        this.div = () => a / b,
+        this.degree = () => a ** b
+}
+let calculator = new Calculator(11, 5);
+console.log(calculator.add());
+console.log(calculator.sub());
+console.log(calculator.mul());
+console.log(calculator.div());
+console.log(calculator.degree());*/
+
+
+/*function Calculator() {
+    this.add = function (a,b) {
+        return a+b;
+    }
+    this.sub = function (a,b) {
+        return a-b;
+    }
+    this.mul = function (a,b) {
+        return a*b;
+    }
+    this.div = function (a,b) {
+        return a/b;
+    }
+}
+let calculator = new Calculator();
+console.log(calculator.add(12,2));
+console.log(calculator.sub(9,5));
+console.log(calculator.mul(10,9));
+console.log(calculator.div(5,1));*/
+
+
+/*function Calculator() {
+    this.add = (a,b) => a + b,
+        this.sub = (a,b) => a - b,
+        this.mul = (a,b) => a * b,
+        this.div = (a,b) => a / b
+}
+let calculator = new Calculator();
+console.log(calculator.add(12,2));
+console.log(calculator.sub(9,5));
+console.log(calculator.mul(10,9));
+console.log(calculator.div(5,1));*/
+
+
+/*let newAuthor = {
+    name: "Сергей",
+    surname: "Петров"
+};
+let book = {
+    "main title": "Новая книга",
+    author: newAuthor
+}
+console.log(book.author);
+console.log(book.author.name);*/
+
+
+function Person(name, age, sex) {
+    this.name = name;
+    this.age = age;
+    this.sex = sex;
+}
+let rand = new Person("Rand McKinnon", 33, "M");
+let ken = new Person("Ken Jones", 39, "M");
+
+function Car(make, model, year, owner) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.owner = owner;
+    this.displayCar = displayCar;
+}
+var car1 = new Car("Eagle", "Talon TSi", 1993, rand);
+var car2 = new Car("Nissan", "300ZX", 1992, ken);
+
+console.log(car1.owner);
+console.log(car2.owner.name);
+
+
+function displayCar() {
+    let result = "A Beautiful " + this.year + " " +
+        this.make + " " + this.model;
+    console.log(result);
+}
+car1.displayCar();
+car2.displayCar();
