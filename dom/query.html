@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="contents">
+        <ul class="book">
+            <li class="chapter">Глава 1</li>
+            <li class="chapter">Глава 2</li>
+        </ul>
+    </div>
+
+<div class="newDiv">
+    Текст красного цвета
+</div>
+
+<style>
+    body {
+        color: red;
+        margin: 5px;
+    }
+</style>
+
+    <script>
+        let chapter = document.querySelector('.chapter');
+        console.log(chapter);
+        let chapters = document.querySelectorAll('.chapter');
+        console.log(chapters);
+        let text = document.querySelector(".newDiv");
+        text.style.color = "red";
+        text.style.background = "yellow";
+        text.style.width = "100px";
+        text.style.border = "1px solid black";
+        text.style.borderRadius = "center";
+        text.style.height = "100px";
+        text.style.lineHeight = "32px";
+        text.style.lineHeight = "";
+        console.log(document.body.style.color);
+        console.log(document.body.style.marginTop);
+        let computedStyle = getComputedStyle(document.body);
+        console.log(computedStyle.color);
+        console.log(computedStyle.marginTop);
+    </script>
+    
+</body>
+</html>
