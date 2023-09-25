@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div>Пользователи:</div>
+    <div class = "example-class">Пользователи:</div>
     <ul>
         <a><li>Джон</li></a>
         <li>Пит</li>
@@ -38,6 +38,19 @@
             target[i].setAttribute("target","_blank")
             console.log(target[i]);
         }
+
+
+        let example = document.querySelectorAll('.example-class');
+        for(let i=0;i<example.length; i++) {
+            example[i].style.height = "100px";
+            console.log(example[i]);
+        }
+
+        let all = document.querySelectorAll('*');
+        for(let i=0;i<all.length; i++) {
+            console.log(all[i]);
+        }
+        console.log(`${all.length}`);
     </script>
 </body>
 </html>
