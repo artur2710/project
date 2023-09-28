@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body * {
+            margin: 10px;
+            border: 1px solid blue;
+        }
+    </style>
+
+    <button id="elem">Нажми меня</button>
+
+    <button id="elem2">Нажми меня</button>
+    
+    <form onclick="alert('form')">FORM
+        <div onclick="alert('div')">DIV
+            <p onclick="alert('p')">P</p>
+        </div>
+    </form>
+
+    <form id="form">FORM
+        <div>DiV
+            <p>P</p>
+        </div>
+    </form>
+
+    <ul id="ul">CARS
+        <li>AUDI</li>
+        <li>BMW</li>
+        <li>MERCEDES</li>
+    </ul>
+
+    <body onclick="alert(`сюда всплытие не дойдёт`)">
+    <button onclick="event.stopPropagation()">Кликни меня</button>
+</body>
+
+    <script>
+        elem.addEventListener('click', {
+            handleEvent(event) {
+                console.log(event.type + "на" +
+                    event.currentTarget);
+                console.log(event);
+            }
+        });//click на [object HTMLButtonElement]
+
+        function handleEvent(event) {
+            switch (event.type) {
+                case 'mousedown':
+                    elem2.innerHTML = "Нажата кнопка мыши";
+                    break;
+                case 'mouseup': elem2.innerHTML += "...и отжата";
+                    break
+            }
+        }
+
+        elem2.addEventListener('mousedown', handleEvent);
+        elem2.addEventListener('mouseup', handleEvent);
+
+        form.onclick = function(event) {
+            alert("target = " + event.target.tagName + ", this=" +
+            event.currentTarget.tagName);
+        }
+        
+        ul.onclick = function(event) {
+            alert(event.target.innerHTML);
+        }
+
+    </script>
+</body>
+
+</html>
