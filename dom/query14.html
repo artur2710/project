@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .selected {
+            background-color: red;}
+    </style>
+
+    <button id="button">Нажми Alt+Shift+Click на мне!</button>
+
+    <ul id="ul">CARS
+        <li>Geely</li>
+        <li>JAC</li>
+        <li>Moskvich</li>
+    </ul>
+
+    <script>
+        /*button.onclick = function(event) {
+            if (event.altKey && event.shiftKey) {
+                alert('Ура!')
+            }
+        }*/
+
+       let button = document.querySelector('button');
+       let size = 20;
+       button.style.fontSize = `${size}px`;
+       button.addEventListener('click', ()=> {
+        size *=2;
+        button.style.fontSize = `${size}px`;
+       });
+
+       ul.onclick = function(event) {
+      if (event.target.tagName != "LI") return;
+
+      if (event.ctrlKey || event.metaKey) {
+        toggleSelect(event.target);
+      } else {
+        singleSelect(event.target);
+      }
+
+    }
+
+    ul.onmousedown = function() {
+      return false;
+    };
+
+    function toggleSelect(li) {
+      li.classList.toggle('selected');
+    }
+
+    function singleSelect(li) {
+      let selected = ul.querySelectorAll('.selected');
+      for(let elem of selected) {
+        elem.classList.remove('selected');
+      }
+      li.classList.add('selected');
+    }
+
+  
+    </script>
+</body>
+</html>

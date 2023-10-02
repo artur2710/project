@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="one" type="text" name="key" value="Введите текст"></input>
+
+    <button id="button">кнопка</button>
+    <script>
+        document.addEventListener('keydown',
+        function(event) {
+            if (event.code == 'KeyZ' && (event.ctrlKey ||
+            event.metaKey)) {
+                alert('Отменить!')
+            }
+        });
+
+        one.addEventListener('keydown',
+        function(event) {
+            if (event.code == 'Enter') {
+                alert(one.value);
+            }
+        });
+
+        let button = document.querySelector('#button');
+        button.addEventListener('click',()=>{
+            alert('ку-ку');
+        })
+
+        button.addEventListener('mouseover',()=>{
+            let clickEvent = new Event('click');//создаем событие
+            button.dispatchEvent(clickEvent);//имтируем клик на кнопку
+        });
+    </script>
+</body>
+</html>

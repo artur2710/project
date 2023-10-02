@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button">кнопка</button>
+
+    <h1 id="elem">Привет из кода</h1>
+
+    <button onclick="dispatch()">Dispatch (click)</button>
+    <button onclick="dispatch2()">Dispatch (click with no bubble)</button>
+    <p>Click me</p>
+    <script>
+        let button = document.querySelector('#button');
+        button.addEventListener('showMessage', function(){
+            alert('мяу-мяу');
+        });
+        button.addEventListener('mouseover',function (){
+            let showMessageEvent = new Event('showMessage');//создаем событие
+            button.dispatchEvent(showMessageEvent);//вызываем срабатывание события
+        });
+
+        document.addEventListener("hello",function(event){
+            alert("Привет от " + event.target.tagName);
+        });
+        let event = new Event("hello",{
+            bubbles: true
+        });
+        elem.dispatchEvent(event);
+        console.log(event);
+
+        const p = document.querySelector("p");
+        function myFunc(e) {
+            console.log("click", "bubbles: " + e.bubbles)
+        };
+        p.addEventListener("click", myFunc);
+        p.addEventListener("click", myFunc);
+        const dispatch = function() {
+            const event = new Event("click", {bubbles: false});
+            p.dispatchEvent( event )};
+            const dispatch2 = function() {
+                const event = new Event ("click", {bubbles: true});
+                p.dispatchEvent( event )
+            };
+    </script>
+</body>
+</html>

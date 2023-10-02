@@ -48,6 +48,9 @@
         </div>
     </div>
 
+    <a href="https://yotube.com/" onclick="return false">Нажми здесь</a>
+    <a href="https://yotube.com/" onclick="eventDefault()">здесь</a>
+
     <script>
         container.onclick = function(event) {
             if (event.target.className != 'remove-button') return;
@@ -55,6 +58,8 @@
             let pane = event.target.closest('.pane');
             pane.remove();
         };
+
+
     </script>
 </body>
 
