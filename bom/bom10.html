@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+    div{
+        position: relative;
+        float: left;
+        box-sizing: border-box;
+    }
+    .container{
+        width: 440px;
+        margin: 0 auto;
+        float: none;
+        background: #fff;
+    }
+    .row{
+        float: none;
+    }
+    .container:after, .container:before, .row:after, .row:before {
+        display: table;
+        content: " ";
+        box-sizing: border-box;
+        clear: both;
+    }
+    .col-1{
+        width: 8.33333%;
+    }
+    .col-2{
+        width: 16.66666%;
+    }
+    .col-3{
+        width: 25%;
+    }
+    .col-4{
+        width: 33.33333%;
+    }
+    .col-5{
+        width: 41.66666%;
+    }
+    .col-6{
+        width: 50%;
+    }
+    .col-7{
+        width: 58.33333%;
+    }
+    .col-8{
+        width: 66.66666%;
+    }
+    .col-9{
+        width: 75%;
+    }
+    .col-10{
+        width: 83.33333%;
+    }
+    .col-11{
+        width: 91.66666%;
+    }
+    .col-12{
+        width: 100%;
+    }
+    .col-1,.col-2,.col-3,.col-4,
+    .col-5,.col-6,.col-7,.col-8,
+    .col-9,.col-10,.col-11,.col-12{
+        min-height: 1px;
+    }
+    @media (min-width: 768px){
+        .container{
+            width: 768px;
+        }
+        .col-md-1{
+            width: 8.33333%;
+        }
+        .col-md-2{
+            width: 16.66666%;
+        }
+        .col-md-3{
+            width: 25%;
+        }
+        .col-md-4{
+            width: 33.33333%;
+        }
+        .col-md-5{
+            width: 41.66666%;
+        }
+        .col-md-6{
+            width: 50%;
+        }
+        .col-md-7{
+            width: 58.33333%;
+        }
+        .col-md-8{
+            width: 66.66666%;
+        }
+        .col-md-9{
+            width: 75%;
+        }
+        .col-md-10{
+            width: 83.33333%;
+        }
+        .col-md-11{
+            width: 91.66666%;
+        }
+        .col-md-12{
+            width: 100%;
+        }
+        .col-md-1,.col-md-2,.col-md-3,.col-md-4,
+        .col-md-5,.col-md-6,.col-md-7,.col-md-8,
+        .col-md-9,.col-md-10,.col-md-11,.col-md-12{
+            min-height: 1px;
+        }
+    
+    }
+    
+    @media (min-width: 1200px){
+        .container{
+            width: 1200px;
+        }
+        .col-lg-1{
+            width: 8.33333%;
+        }
+        .col-lg-2{
+            width: 16.66666%;
+        }
+        .col-lg-3{
+            width: 25%;
+        }
+        .col-lg-4{
+            width: 33.33333%;
+        }
+        .col-lg-5{
+            width: 41.66666%;
+        }
+        .col-lg-6{
+            width: 50%;
+        }
+        .col-lg-7{
+            width: 58.33333%;
+        }
+        .col-lg-8{
+            width: 66.66666%;
+        }
+        .col-lg-9{
+            width: 75%;
+        }
+        .col-lg-10{
+            width: 83.33333%;
+        }
+        .col-lg-11{
+            width: 91.66666%;
+        }
+        .col-lg-12{
+            width: 100%;
+        }
+        .col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,
+        .col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,
+        .col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12{
+            min-height: 1px;
+        }
+    }
+    .reg-form{
+        border: 1px solid #eee;
+        position: relative;
+        float: left;
+        width: 100%;
+        background: #f3f3f3;
+        border-radius: 10px;
+        box-shadow: 2px 2px 6px rgb(0 0 0 / 50%);
+        box-sizing: border-box;
+    }
+    .form-label{
+        float: right;
+        padding: 15px 15px;
+    }
+    .form-label label{
+    
+    }
+    .form-control{
+        padding: 10px 15px;
+        width: 75%;
+    }
+    .form-control-check,.form-control-radio{
+        width: 100%;
+    }
+    .form-control-check:nth-child(1), .form-control-radio:first-child{
+        margin-top: 6px;
+    }
+    .form-control input[type="text"], .form-control input[type="password"], .form-control input[type="date"], 
+    select,.form-control input[type="file"]{
+        width: 100%;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid #bfbfbf;
+        box-sizing: border-box;
+    }
+    .error input, .error textarea, .error select{
+        border-color: red !important;
+    }
+    .error-text{
+        color: red;
+        padding: 5px 25px;
+        font-size: 12px;
+    }
+    .form-control button{
+        width: 50%;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid #bfbfbf;
+        box-sizing: border-box;
+        background: #97f39f;   
+    }
+    .form-control button:hover{
+        background: green;
+    }
+    
+    .form-control button:active{
+        background: red;
+    }
+    .form-control input[type="text"]:focus{
+        border:1px solid rgb(219, 89, 180);
+    }
+</style>
+ 
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <form action="" method="post" name="reg_form" class="reg-form" id="reg_form">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-label">
+                                <label for="name">Имя:</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-control">
+                                <input type="text" name="name" id="name" value="" placeholder="Введите имя">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-label">
+                                <label for="email">Email:</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-control">
+                                <input type="text" name="email" id="email" value="" placeholder="Введите Email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-label">
+                                <label for="phone">Телефон:</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-control">
+                                <input type="text" name="phone" id="phone" value="" placeholder="Введите телефон">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-label">
+                                <label for="education">Образование:</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-control">
+                                <select name="education" id="education">
+                                    <option value="">Выберите образование</option>
+                                    <option value="Базовое">Базовое</option>
+                                    <option value="Среднее">Среднее</option>
+                                    <option value="Высшее">Высшее</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-label">
+                                <label>Пол:</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-control">
+                                <div class="form-control-radio">
+                                    <input type="radio" name="sex" id="sex-m" value="Мужской">
+                                    <label for="sex-m">Мужской</label>
+                                </div>
+                                <div class="form-control-radio">
+                                    <input type="radio" name="sex" id="sex-f" value="Женский">
+                                    <label for="sex-f">Женский</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-label">
+                                <label>Хобби:</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-control">
+                                <div class="form-control-check">
+                                    <input type="checkbox" name="hobby" id="hobby-1" value="Спорт"><label
+                                        for="hobby-1">Спорт</label>
+                                </div>
+                                <div class="form-control-check">
+                                    <input type="checkbox" name="hobby" id="hobby-2" value="Программирование"><label
+                                        for="hobby-2">Программирование</label>
+                                </div>
+                                <div class="form-control-check">
+                                    <input type="checkbox" name="hobby" id="hobby-3" value="Рисование"><label
+                                        for="hobby-3">Рисование</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-label">
+                                <label for="about">О себе:</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-control">
+                                <textarea name="about" id="about" cols="30" rows="10"
+                                    placeholder="Пару слов о себе"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-label">
+                                <label for="avatar">Аватар:</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-control">
+                                <input type="file" name="avatar" id="avatar">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-control">
+                                <button type="submit">Отправить</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="result">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="bom10.js"></script>
+</body>
+
+</html>

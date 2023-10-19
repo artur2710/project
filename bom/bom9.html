@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .view,
+        .edit {
+            height: 150px;
+            width: 400px;
+            font-family: sans-serif;
+            font-size: 14px;
+            display: block;
+        }
+
+        .view {
+            /*padding+border=3px*/
+            padding: 2px;
+            border: 1px solid black;
+        }
+
+        .edit {
+            /*замена внутреннего отступа рамкой*/
+            border: 3px solid black;
+            padding: 0px;
+        }
+
+        .edit:focus {
+            outline: none;
+        }
+    </style>
+
+    <div id="view" class="view">Text</div>
+
+    <input type="text" onchange="alert(this.value)">
+    <input type="button" value="Button">
+
+
+    <select onchange="alert(this.value)">
+        <option value="">Выберите что-нибудь</option>
+        <option value="1">Пицца</option>
+        <option value="2">Салат</option>
+        <option value="3">Кофе</option>
+    </select>
+
+    <input type="text" id="input"> oninput:
+    <span id="result"></span>
+
+    <form onsubmit="alert('submit');return false">
+        Первый пример: нажмите enter:
+        <input type="text" value="Text"><br>
+        Второй пример: нажмите на кнопку "Отправить":
+        <input type="submit" value="Отправить">
+    </form>
+
+    <form onsubmit="alert('submit');return false">
+        <input type="text" size="30" value="Установите фокус и нажмите Enter">
+        <input type="submit" value="отправить" onclick="alert('click')">
+    </form>
+
+
+    <form>
+        <input type="text" value="имя">
+        <input type="text" value="email">
+        <input type="text" value="телефон">
+        <select>Образование</select>
+        <input type="radio" value="пол">
+        <input type="checkbox" value="хобби">
+        <textarea>о себе</textarea>
+    </form>
+    <script src="bom9.js"></script>
+</body>
+
+</html>

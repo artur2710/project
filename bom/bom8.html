@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        li {
+            cursor: pointer;
+        }
+        :focus {
+            outline: 1px dashed green;
+        }
+    </style>
+    <ul>
+        <li tabindex="1">Один</li>
+        <li tabindex="0">Ноль</li>
+        <li tabindex="2">Два</li>
+        <li tabindex="-1">Минус один</li>
+    </ul>
+
+    <script src="bom8.js"></script>
+</body>
+</html>
