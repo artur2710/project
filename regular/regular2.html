@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "+7(903)-123-45-67";
+        let regexp = /\d/g;
+        alert(str.match(regexp));//массив совпадений 7,9,5,8,6,
+        alert(str.match(regexp).join('')); //79031234567
+
+        let str2 = "+7(903)-123-45-67";
+        alert(str2.replace(/\D/g,""));//79031234567
+
+        let str3 = "Mary had a little lamb";
+        alert(/^Mary/.test(str3));
+
+        let str4 = "it's fleece was white and snow";
+        alert(/snow$/.test(str4));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let goodInput = "12:34";
+    let badInput = "12:345";
+    let regexp = /^\d\d:\d\d$/;
+    alert(regexp.test(goodInput));
+    alert(regexp.test(badInput));
+
+    alert ("Топ хоп".match(/[тх]оп/gi));
+
+    alert("Вуаля".match(/В[уа]ля/));
+    //null, нет совпадений
+    //ищет "В", затем [у или а], потом "ля"
+    //а в стрке В, потом у, потом а
+
+    alert ("Exception 0xAF".match(/x[0-9A-F][0-9A-F]/g));
+    //xAF
+
+    alert ("Мне 12345 лет".match(/\d{5}/));
+    //123456
+
+    alert ("Мне не 12, а 1234 года".match(/\d{3,5}/));
+    //"1234"
+
+    alert ("Мне не 12, а 345678 лет".match(/\d{3,}/));
+    //"3456789"
+
+    let str = "+7(903)-123-45-67";
+    let numbers = str.match(/\d{1,}/g);
+    alert(numbers);//7,903,123,45,67
+
+    let regexp1 = /\.{3,}/g;
+    alert("Привет!... Как дела?...".match(regexp1));
+
+    let str1 = "+7(903)-123-45-67";
+    alert(str1.match(/\d+/g));//7,90,123,45,67
+
+    let str2 = "Следует писать color или colour?";
+    alert(str2.match(/colou?r/g));//color, colour
+
+    alert("100 10 1".match(/\d0*/g));//100,10,1
+
+    alert("100 10 1".match(/\d0+/g));//100, 10//1
+
+    alert("0 1 12.345 7890".match(/\d+\.\d+/g));
+   </script> 
+</body>
+</html>

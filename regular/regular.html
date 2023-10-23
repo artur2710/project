@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = "Любо, братцы, дюбо!";
+        alert(str.match(/любо/gi));
+        //Любо, любо (массив из 2-х подстрок-совпадений)
+
+        let result = str.match(/любо/i)//без флага g
+        alert(result[0]);//Любо(первое совпадение)
+        alert(result.length);//1
+
+        //без флага g
+        alert("Люблю HTML".replace(/HTML/, "$& и JavaScript")); //люблю HTML и Javascript
+
+        // I will, we will// с флагом g
+        alert("We will, we will".replace(/we/i,"I"));
+
+        //I will, I will
+        alert("We will, we will".replace(/we/ig, "I"));
+
+        alert('12-34-56'.replace("-",":"));
+
+        alert('12-34-56'.replace(/-/g,":"));
+
+        let str1 = "Я ЛюБлЮ JavaScript";
+
+        let regexp = /люблю/i;
+
+        alert(regexp.test(str1));
+
+        let str2 = "+7(903)-123-45-67";
+        let regexp1 = /\d/;
+        alert(str2.match(regexp1));
+    </script>
+</body>
+
+</html>
