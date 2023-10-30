@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        alert("<h1>Привет!</h1>".match(/<[a-z][a-z0-9]*>/gi));//<h1>
+
+        alert("123 456".match(/\d+ \d+?/));//123 4
+
+        let regexp = /([01]\d|2[0-3]):[0-5]\d/g;
+        alert("00:00 10:10 23:59 25:99 1:2".match(regexp));
+        //00:00, 10:10, 23:59
+
+        let regexp1 = /html|css|java(script)?/gi;
+        let str = "Сначала появился язык Java, затем HTML, потом JavaScript";
+        alert(str.match(regexp1));
+
+        let str1 = "html and css";
+        let result = str1.replace(/html|css/gi, str1 => str1.toUpperCase());
+        alert(result);//HTML and CSS
+
+        let str2 = "1 индейка стоит 30€";
+        alert(str2.match(/\d+(?=€)/));//30
+
+        let str3 = "2 индейки стоят 60€";
+        alert(str3.match(/\d+(?!€)/));//2
+
+        let str4 = 'Больше о JavaScript на https://javascript.info';
+        let regexp2 = /javascript/ig;
+        let result1;
+        while (result1 = regexp2.exec(str4)) {
+            alert(`Найдено ${result1[0]} на позиции ${result1.index}`);
+        }
+
+        let str5 = 'let varName = "value"';
+        let regexp3 = /\w+/g;
+        regexp3.lastindex = 4;
+        let word = regexp3.exec(str5);
+        alert(word);
+
+        let str6 = "Я люблю JavaScript!";
+        let regexp4 = /Java.+/;
+        alert(str6.search(regexp4));//8
+
+        let str7 = "John Smith";
+        alert(str7.replace(/(\w+) (\w+)/i, '$2,$1'));//Smith, John
+
+        
+    </script>
+</body>
+
+</html>
