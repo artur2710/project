@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+    <script>
+        //Метод elem.getBoundingClientRect() возвращает координаты в контексте окна для минимальног по размеру прямоугольника
+        //который заключает в себе элемент elem, в виде объекта встроенного класса DOMRect.
+        //https://learn.javascript.ru/coordinates
+        //https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
+        document.querySelector(".child").onmousemove = function(event){
+            let x = Math.round(event.clientX-event.target.getBoundingClientRect().left);
+            console.log("window x", event.target.getBoundingClientRect().left);
+            console.log("viewport x", event.target.getBoundingClientRect().left);
+            let y = Math.round(event.clientY-event.target.getBoundingClientRect().top);
+            console.log("window y", event.clientY);
+            console.log("viewport y", event.target.getBoundingClientRect().top);
+            event.target.innerHTML = `X: ${x}<br>Y: ${y}`;
+        }
+
+    </script>
+</body>
+</html>

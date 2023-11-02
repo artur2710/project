@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function hello() {
+            console.log("привет", this);
+        }
+        hello();
+        let student = {
+            name: "Иван",
+            age: 22,
+            sayHello: hello,
+            sayHelloWindow: hello.bind(window)
+        }
+        student.sayHello();
+        student.sayHelloWindow();
+
+
+        let man = {
+            name: "Сергей",
+            age: 36,
+            loginfo: function (job, phone) {
+                console.log(`Name is ${this.name}`);
+                console.log(`Age is ${this.age}`);
+                console.log(`Job is ${job}`);
+                console.log(`Phone is ${phone}`);
+            }
+        }
+        let women = {
+            name: "Света",
+            age: 27
+        }
+        man.loginfo()
+        man.loginfo.bind(women)();
+        man.loginfo.bind(women,'frontend','+375337893456')();
+        man.loginfo.call(women,'frontend','+375337893456');
+        man.loginfo.apply(women,['frontend','+375337893456']);
+
+
+        let arr = [10,45,50,344,30];
+        console.log(Math.max.apply(null,arr));
+        console.log(Math.min.apply(null,arr));
+    </script>
+</body>
+
+</html>
