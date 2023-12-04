@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="one"></div>
+    <script>
+        document.querySelector(".one").onmouseover = function (event) {
+            if (event.target.classList.contains("one")) {
+                event.target.classList.add("blue");
+            }
+        }
+
+        document.querySelector(".one").onmouseout = function (event) {
+            if (event.target.classList.contains("one")) {
+                event.target.classList.remove("blue");
+            }
+        }
+
+        document.querySelector(".one").oncontextmenu = function (event) {
+            if (event.target.classList.contains("one")) {
+                let styles = getComputedStyle(this);
+                let width = parseInt(styles.width);
+                let height = parseInt(styles.height);
+
+                this.style.width = `${width/2}px`;
+                this.style.height = `${height/2}px`;
+            }
+        }
+
+        document.querySelector(".one").onclick = function (event) {
+            if (event.target.classList.contains("one")) {
+                let styles = getComputedStyle(this);
+                let width = parseInt(styles.width);
+                let height = parseInt(styles.height);
+
+                this.style.width = `${width*2}px`;
+                this.style.height = `${height*2}px`;
+            }
+        }
+    </script>
+</body>
+</html>

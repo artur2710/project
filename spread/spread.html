@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div></div>
+        <div></div>
+    </div>
+    <script>
+        const citiesBelarus = ['Витебск', 'Минск', 'Гомель', 'Брест', 'Могтлев'];
+        const regionalCitiesBelarus = ['Пинск', 'Бобруйск', 'Барановичи', 'Мозырь', 'Лида'];
+        console.log(citiesBelarus);
+        console.log(...citiesBelarus);
+        const newCities = [...citiesBelarus];
+        console.log(...newCities);
+
+        const allCities = [...citiesBelarus, ...regionalCitiesBelarus];
+        console.log(allCities);
+        const allConcatCities = citiesBelarus.concat(allCities);
+        console.log(allConcatCities);
+
+        const addNewCities = [...citiesBelarus, 'Жлобин', regionalCitiesBelarus];
+        console.log(addNewCities);
+
+        const populationCities = {
+            Minsk: 1742124,
+            Gomel: 480951,
+            Mogilev: 369200,
+            Vitebsk: 342700,
+            Godno: 317365,
+            Brest: 300715
+        }
+        console.log({ ...populationCities });
+
+        const populationRegionalCities = {
+            Bobrujsk: 220517,
+            Baranovichi: 168772,
+            Borisov: 143919,
+            Minsk: 1800000,
+        }
+        const allCitiesObj = { ...populationCities, ...populationRegionalCities };
+        console.log(allCitiesObj);
+
+        const allCitiesObjAdd = {
+            ...populationCities, Pinsk: 130777,
+            ...populationRegionalCities
+        };
+        console.log(allCitiesObjAdd);
+
+        const uniqueallCities = { ...populationCities, ...populationRegionalCities };
+        console.log(uniqueallCities);
+
+        let array = [1, 9, 33, 7, 6];
+        let max = Math.max(array);
+        max = Math.max(...array);
+        console.log(max);
+
+        let allDivs = document.querySelectorAll('div');
+        console.log(allDivs);
+
+        const nodes = [...allDivs];
+        console.log(nodes);
+        console.log(nodes.map((item, index) => index));
+
+
+        function calc(a, b, ...rest) {
+            console.log(rest);//rest
+            console.log(...rest);//spread
+            return a * b * rest.reduce((a, i) => a * i)
+        }
+        console.log(calc(1, 2, 3, 4));
+
+
+        let elements = [1, 2, 3, 4, 5];
+        let [a, b, ...rest] = elements;
+        console.log(a, b, rest);
+
+
+        let student = {
+            name: 'Alla',
+            surname: 'Ivanova',
+            age: 22,
+            height: 168
+        }
+        let { name, surname, ...restStud } = student;
+        console.log(name, surname, restStud);
+
+
+        function getUniqueParams(...params) {
+            let setCollection = new Set(params);
+            params = [...setCollection];
+            return params;
+        }
+        console.log(getUniqueParams(1, 2, 3, 4, 5, 6, 8, 3, 4, 3));
+
+
+        let numerFirst = [1, 8, 7, 6];
+        let numberSecond = [2, 8, 4, 7, 7];
+        function getUnionOfArray(a, b) {
+            let result = [];
+            a.forEach((item) => {
+                if (b.includes(item) && !result.includes(item)) {
+                    result.push(item);
+                }
+            })
+            return result
+        }
+        console.log(getUnionOfArray(numerFirst, numberSecond));
+
+
+        function getDifDate(date1, date2) {
+            let a = date1.split(".").map((item) => +item);
+            let b = date2.split(".").map((item) => +item);
+
+            if ((a[2] > b[2]) || ((a[2] == b[2]) && (a[1] > b[1])) || ((a[2] == b[2]) && a[1] == b[1] && a[0] > b[0])) {
+                return 1;
+            }
+
+            if (a[2] == b[2] && a[1] == b[1] && a[0] == b[0]) {
+                return 0;
+            }
+            return -1;
+        }
+
+        let array1 = ["01.01.2025", "01.01.2018", "01.01.2022", "01.01.2023", "01.01.2020"];
+        console.log(array1);
+        array1.sort(getDifDate);
+        console.log(array1);
+
+    </script>
+</body>
+
+</html>
