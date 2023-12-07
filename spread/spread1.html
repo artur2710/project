@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    <style>
+        li:nth-child(2n+1):hover {
+            color: blue;
+        }
+
+        li:nth-child(2n):hover {
+            color: red;
+        }
+    </style>
+    <script>
+
+        var num = 1234;
+        function getReversedNum(num) {
+            let result = 0;
+            while (num) {
+                result = result * 10 + num % 10;
+                num = Math.floor(num / 10);
+            }
+            return result;
+        }
+        console.log(getReversedNum(num));
+
+
+
+        const words = ['home', 'cat', 'bicycle'];
+
+        let min = words[0];
+        for (const word of words) {
+            if (word.length < min.length) {
+                min = word;
+            }
+        }
+        console.log(min);
+
+
+
+        let arr1 = [1,9,8];
+        let arr2 = [8,9,1];
+        function compare() {
+            if(arr1.sort((a,b)=>a-b).join('') == arr2.sort((a,b)=>a-b).join('')) {
+                return true
+            }
+            else return false
+        }
+        console.log(compare());
+
+
+
+        let sentence = "Mama myla ramu";
+        console.log(sentence);
+        sentence = sentence.split("");
+        sentence = sentence.filter(item=>item).join('');
+        console.log(sentence);
+
+
+
+        let str = "white white snow wind";
+        let repeat = {};
+        let maxKey = '';
+        for (var i=0; i<str.length; i++) {
+            var key = str[i];
+            if(!repeat[key]) {
+                repeat[key]=0;
+            }
+            repeat[key]++;
+            if(maxKey == ''|| repeat[maxKey]) {
+                maxKey = key;
+            }
+        }
+        console.log(maxKey + ":" + repeat[maxKey]);
+    </script>
+
+</body>
+
+</html>
