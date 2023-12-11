@@ -86,7 +86,7 @@
                 repeat[key]=0;
             }
             repeat[key]++;
-            if(maxKey == ''|| repeat[maxKey]) {
+            if(maxKey == ''|| repeat[key]>repeat[maxKey]) {
                 maxKey = key;
             }
         }
