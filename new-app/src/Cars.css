@@ -1,0 +1,32 @@
+.one {
+    display: flex;
+}
+
+.cars {
+    display: flex;
+}
+
+.brand {
+    display: flex;
+    color: red;
+    font-weight: bold;
+    font-size: large;
+    padding: 5px;
+    margin: 2px 3px;
+}
+
+.year {
+    color: green;
+    font-weight: bolder;
+   /* font-size: x-large;*/
+    padding: 7px;
+    margin: 5px 10px;
+}
+
+.mileage {
+    color: blue;
+    font-weight: lighter;
+    font-size: small;
+    padding: 10px;
+    margin: 5px 2px;
+}
