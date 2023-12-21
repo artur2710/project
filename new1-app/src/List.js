@@ -1,6 +1,6 @@
 import { useState } from 'react';
 export default function List() {
-    const [comment, setComment] = useState("ffffff");
+    const [comment, setComment] = useState("");
     const [hobby, setHobby] = useState("Еда");
     const [name, setName] = useState("Tom");
 
