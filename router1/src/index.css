@@ -1,0 +1,33 @@
+.One {
+    background-color: aquamarine;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+.Two {
+    background-color: bisque;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+img {
+    width: 800px;
+    height: 400px;
+}
+
+.Three {
+    background-color: rgb(18, 224, 104);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: bold;
+
+}
+
+.Four {
+    background-color: bisque;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: bolder;
+}
