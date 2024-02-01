@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 60px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #804328;
+}
+
+.number {
+    display: inline-block;
+    background-color: #b49479;
+    color: black;
+    padding: 40px;
+    vertical-align: baseline;
+    border-radius: 15px;
+    position: relative;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: right 30px;
+}
+
+.number h3 {
+    font-size: medium;
+}
+
+.number p {
+    font-size: small;
+}
+
+.number:nth-child(1) {
+    background-image: url(images/1.png);
+}
+
+.number:nth-child(2) {
+    background-image: url(images/2.png);
+}
+
+.number:nth-child(3) {
+    background-image: url(images/3.png);
+}
+
+.number:nth-child(4) {
+    background-image: url(images/4.png);
+}
+
+.number:nth-child(5) {
+    background-image: url(images/5.png);
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+}
+
+.number:last-child {
+    margin-right: 0;
+}
+
+.number h3 {
+    text-align: center;
+    margin: 10px 40px 50px 20px;
+}
+
+img {
+    width: 20px;
+    height: 20px;
+}
+
+.icon {
+    float: right;
+    margin-right: -15px;
+}
+
+@media screen and (max-width:960px){ 
+    main>section+aside {
+                    display: none; } 
+    main>aside { 
+                flex-basis: 30%; } 
+    main>section { 
+                flex-basis: 70%; }
+     }
+
+@media screen and (max-width:570.99px){ 
+    main{ 
+        flex-direction: column; 
+    } 
+    main>aside { 
+            flex-basis: 20vh; } 
+    main>section { 
+                flex-basis: auto; 
+                order:-1; 
+            } 
+    }
